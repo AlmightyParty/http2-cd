@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<body>
+<p class="http1time"></p>
+<button onclick="http1()">http1</button>
+<p class="https"></p>
+<button onclick="httpss()">https</button>
+<p class="time"></p>
+<button onclick="http2()">http2</button>
+</body>
+</html>
+<script>
+	////https://47.94.95.52:9990   https://47.94.95.52:9991 https://47.94.95.52:9992
+	function http1() {
+		const pageStart=Date.now();
+		for(var i=0;i<50;i++){
+			$.get('http://47.94.95.52:9990/',()=>{
+				console.log('http1')
+				let lapsed = Date.now() - pageStart;
+				document.getElementsByClassName('http1time')[0].innerHTML = ((lapsed) / 1000).toFixed(2) + 's'
+			})
+		}
+	}
+	function httpss() {
+		const pageStart=Date.now();
+		for(var i=0;i<50;i++){
+//			http://127.0.0.1:9991/option
+			$.get('https://47.94.95.52:9991/',()=>{
+				console.log('https')
+				let lapsed = Date.now() - pageStart;
+				document.getElementsByClassName('https')[0].innerHTML = ((lapsed) / 1000).toFixed(2) + 's'
+			})
+		}
+	}
+	function http2() {
+		const pageStart=Date.now();
+		for(var i=0;i<50;i++){
+			$.get('https://47.94.95.52:9992/',()=>{
+				console.log('https')
+				let lapsed = Date.now() - pageStart;
+				document.getElementsByClassName('time')[0].innerHTML = ((lapsed) / 1000).toFixed(2) + 's'
+			})
+		}
+	}
+
+
+
+
+</script>
