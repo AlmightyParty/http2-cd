@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon serve/serve.js & nodemon serve/http1.js & nodemon serve/http2.js & nodemon serve/http.js",
-    "prd":"pm2 start serve/serve.js & pm2 start serve/http1.js & pm2 start serve/http2.js"
+    "prd":"pm2 start serve/serve.js & pm2 start serve/http1.js & pm2 start serve/http2.js & pm2 start serve/http.js"
   },
   "author": "lizhi",
   "license": "MIT",

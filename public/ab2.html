@@ -19,7 +19,7 @@
 	function http1() {
 		const pageStart=Date.now();
 		for(var i=0;i<50;i++){
-			$.get('http://47.94.95.52:9990/',()=>{
+			$.get('http://127.0.0.1:9990/',()=>{
 				console.log('http1')
 				let lapsed = Date.now() - pageStart;
 				document.getElementsByClassName('http1time')[0].innerHTML = ((lapsed) / 1000).toFixed(2) + 's'
@@ -30,7 +30,7 @@
 		const pageStart=Date.now();
 		for(var i=0;i<50;i++){
 //			http://127.0.0.1:9991/option
-			$.get('https://47.94.95.52:9991/',()=>{
+			$.get('https://127.0.0.1:9991/',()=>{
 				console.log('https')
 				let lapsed = Date.now() - pageStart;
 				document.getElementsByClassName('https')[0].innerHTML = ((lapsed) / 1000).toFixed(2) + 's'
@@ -40,7 +40,7 @@
 	function http2() {
 		const pageStart=Date.now();
 		for(var i=0;i<50;i++){
-			$.get('https://47.94.95.52:9992/',()=>{
+			$.get('https://127.0.0.1:9992/',()=>{
 				console.log('https')
 				let lapsed = Date.now() - pageStart;
 				document.getElementsByClassName('time')[0].innerHTML = ((lapsed) / 1000).toFixed(2) + 's'

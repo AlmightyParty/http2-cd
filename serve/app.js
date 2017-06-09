@@ -19,6 +19,7 @@ app.use(convert(logger()))
 app.use(convert(compress()))
 app.use(async (ctx, next) => {
     ctx.set('ETag', '123');
+    // 本身是http的服务 所以没用
     ctx.set('Strict-Transport-Security', 'max-age=15552000;');
      // res.setHeader('Strict-Transport-Security', 'max-age=15552000;')
   await next();

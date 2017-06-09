@@ -30,12 +30,12 @@
 	</style>
 </head>
 <body>
-<div class="box">
-	<h2>Http1.x</h2>
-	<p>Time: <span id="output-http0"></span></p>
-	<p class="done done-0">× Unfinished...</p>
-	<button class="btn-0">Get Response</button>
-</div>
+<!--<div class="box">-->
+	<!--<h2>Http1.x</h2>-->
+	<!--<p>Time: <span id="output-http0"></span></p>-->
+	<!--<p class="done done-0">× Unfinished...</p>-->
+	<!--<button class="btn-0">Get Response</button>-->
+<!--</div>-->
 
 <div class="box">
 	<h2>Https</h2>
@@ -107,17 +107,17 @@
 			})
 		}
 	}
+//	document.querySelector('.btn-0').onclick = function () {
+////		clickEvents(0, 'https://47.94.95.52:9991/option?size=' + reqSize + '&delay=' + reqDelay, 'output-http1', 'http1.x')
+//		clickEvents(0, 'https://47.94.95.52:9990/option?size=' + reqSize + '&delay=' + reqDelay, 'output-http1', 'http1.x')
+//	}
 	document.querySelector('.btn-0').onclick = function () {
-//		clickEvents(0, 'https://47.94.95.52:9991/option?size=' + reqSize + '&delay=' + reqDelay, 'output-http1', 'http1.x')
-		clickEvents(0, 'https://47.94.95.52:9990/option?size=' + reqSize + '&delay=' + reqDelay, 'output-http1', 'http1.x')
-	}
-	document.querySelector('.btn-1').onclick = function () {
 //		clickEvents(0, 'https://47.94.95.52:9991/option?size=' + reqSize + '&delay=' + reqDelay, 'output-http1', 'http1.x')
 		clickEvents(0, 'https://47.94.95.52:9991/option?size=' + reqSize + '&delay=' + reqDelay, 'output-http1', 'https')
 	}
 
 
-	document.querySelector('.btn-2').onclick = function () {
+	document.querySelector('.btn-1').onclick = function () {
 		clickEvents(1, 'https://47.94.95.52:9992/option?size=' + reqSize + '&delay=' + reqDelay, 'output-http2', 'http2')
 	}
 </script>

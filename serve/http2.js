@@ -17,6 +17,7 @@ const allow = (res) => {
 	res.header("Access-Control-Allow-Origin", "*")
 	res.header("Access-Control-Allow-Headers", "X-Requested-With")
 	res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS")
+	res.header('Strict-Transport-Security', 'max-age=15552000')
 }
 
 app.set('views', path.join(__dirname, 'views'))
